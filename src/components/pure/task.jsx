@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Task } from '../../models/task.class';
 
+import '../../styles/task.scss'; 
 
 const TaskComponent = ({task}) => {
+
+    useEffect(() => {
+        
+        console.log ('Tarea creada')
+        return () => {
+            console.log ('Tarea unmount')
+        };
+    }, [task]);
     return (
         <div>
-            <h2>
+            <h2 className='task-name'>
                NOMBRE: { task.name }
             </h2>
             <h3>
