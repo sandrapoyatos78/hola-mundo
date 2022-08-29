@@ -10,18 +10,19 @@ import MicomponeneteconCont from './hooks/Ejemplo3'
 import Ejemplo4 from './hooks/Ejemplo4';
 import GrettingStyle from './components/pure/grettingStyle';
 import Ejemplo_prac from './hooks/livecycle/ejemplo_prac.jsx';
+import Father from './components/conteiner/father';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+       {/* <header className="App-header">*/}
+        {/*  <img src={logo} className="App-logo" alt="logo" />*/}
         {/* Componente propio Greeting.jsx */}
         {/* <Greeting name= {"SANDRA"}></Greeting> */}
         {/* Componente ejemplo funcional*/}
         {/* <Greetingf name= "San"></Greetingf> */}
          {/* Componente listado de tareas */}
-        {/*  <TaskListComponent></TaskListComponent>  */}
+      
          {/* <ContactComponentA></ContactComponentA>*/}
          {/* <Ejemplo1></Ejemplo1> */}
        {/*<Ejemplo2></Ejemplo2> */}
@@ -33,8 +34,12 @@ function App() {
           </h3>
          {/* </Ejemplo4> */}
           {/* <GrettingStyle name = "Sandra"></GrettingStyle>  */}
-         <Ejemplo_prac></Ejemplo_prac>
-      </header>
+           {/* <Ejemplo_prac></Ejemplo_prac>  */}
+
+      {/* </header> */}
+        {/* GESTION DE EVENTOS */}
+    <TaskListComponent></TaskListComponent> 
+      {/*   <Father></Father> */}
     </div>
   );
 }
