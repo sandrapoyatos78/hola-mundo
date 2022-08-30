@@ -11,6 +11,7 @@ import Ejemplo4 from './hooks/Ejemplo4';
 import GrettingStyle from './components/pure/grettingStyle';
 import Ejemplo_prac from './hooks/livecycle/ejemplo_prac.jsx';
 import Father from './components/conteiner/father';
+import OptionalRender from './components/pure/optional_render';
 
 function App() {
   return (
@@ -38,7 +39,11 @@ function App() {
 
       {/* </header> */}
         {/* GESTION DE EVENTOS */}
-    <TaskListComponent></TaskListComponent> 
+   
+    {/* EJEMPLOS DE RENDERIZADO CONDICIONAL */}
+      <OptionalRender></OptionalRender>
+    {/* PROYECTO FINAL */}
+      {/* <TaskListComponent></TaskListComponent> */}
       {/*   <Father></Father> */}
     </div>
   );
