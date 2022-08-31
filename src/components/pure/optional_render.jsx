@@ -11,7 +11,7 @@ const loggedStyle = {
     color: 'white', 
     fontWeight: 'bold'
 };
-
+// estilo para user no logeado
 const unloggedStyle = {
     backgroundColor: 'tomato',
     color: 'white',

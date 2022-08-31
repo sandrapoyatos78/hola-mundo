@@ -12,6 +12,8 @@ import GrettingStyle from './components/pure/grettingStyle';
 import Ejemplo_prac from './hooks/livecycle/ejemplo_prac.jsx';
 import Father from './components/conteiner/father';
 import OptionalRender from './components/pure/optional_render';
+import LoginFormik from './components/pure/forms/loginFormik';
+import RegistrerFormik from './components/pure/forms/registrerFormik';
 
 function App() {
   return (
@@ -41,10 +43,14 @@ function App() {
         {/* GESTION DE EVENTOS */}
    
     {/* EJEMPLOS DE RENDERIZADO CONDICIONAL */}
-      <OptionalRender></OptionalRender>
+     {/*  <OptionalRender></OptionalRender> */}
+    {/* EJEMPLOS DE FORMIK Y YUP */}
+     {/*<LoginFormik></LoginFormik> */}
+     <RegistrerFormik></RegistrerFormik>
     {/* PROYECTO FINAL */}
-      {/* <TaskListComponent></TaskListComponent> */}
-      {/*   <Father></Father> */}
+   {/*   <TaskListComponent></TaskListComponent> */}
+    {/*   <Father></Father> */}
+    
     </div>
   );
 }
