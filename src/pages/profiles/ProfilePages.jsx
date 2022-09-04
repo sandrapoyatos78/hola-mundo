@@ -1,17 +1,20 @@
 import React from 'react';
 import {  useNavigate  } from 'react-router-dom';
 
-const NotfoundPages = () => {
+const ProfilePages = ({user}) => {
     const navigate = useNavigate();
 
     return (
         <div>
-            <h1>404-NOT FOUND</h1>
+            <h1>
+                YOUR PROFILE
+            </h1>
+            <button onClick={ () => navigate('/')}>Your Tasks</button>
             <button onClick={ () => navigate('/')}>
-                GO TO BACK home
+                GO TO BACK
             </button>
         </div>
     );
 }
 
-export default NotfoundPages;
+export default ProfilePages;
