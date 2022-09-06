@@ -5,12 +5,7 @@ const AboutPage = () => {
 
     const location = useLocation();
     const navigate = useNavigate();
-
     console.log("we are, ", location.pathname);
-
-    const navigationAbout = () => {
-        navigate("/about");
-    }
     return (
         <div>
             <h1>
@@ -21,7 +16,7 @@ const AboutPage = () => {
             <button onClick={ () => navigate('/')}>
                 GO TO HOME
             </button>
-            <button onClick={navigationAbout}>
+            <button onClick={() => navigate(-1)}>
                 GO BACK
             </button>
         </div>

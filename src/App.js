@@ -46,7 +46,7 @@ function App() {
      {/*  <OptionalRender></OptionalRender> */}
     {/* EJEMPLOS DE FORMIK Y YUP */}
      {/*<LoginFormik></LoginFormik> */}
-     <RegistrerFormik></RegistrerFormik>
+     {/* <RegistrerFormik></RegistrerFormik> */}
     {/* PROYECTO FINAL */}
    {/*   <TaskListComponent></TaskListComponent> */}
     {/*   <Father></Father> */}
