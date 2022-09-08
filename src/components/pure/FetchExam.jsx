@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getAllUser } from '../../service/fetchService';
+import { getAllUser, login } from '../../service/fetchService';
 import { getAllPagesUser } from '../../service/fetchService';
 import {getuserDetails} from '../../service/fetchService';
 
@@ -9,7 +9,7 @@ const FetchExam = () => {
     const [pages, setPages] = useState(2);
     const [userperPage, setUserperPage] = useState(6);
     const [selectUser, setSelectUser] = useState(null);
-
+   
     useEffect(() => {
         obtainUsers();
     }, []);
@@ -66,8 +66,27 @@ const FetchExam = () => {
 
 
     }
+
+    const authUser = () => {
+        login('eve.holt@reqres.in', 'cityslicka')
+        .then((response) => {
+            console.log('all paged user: ', response.data);
+            setSelectUser(response.data);
+        })
+        .catch((error) => {
+            alert(`error while retreiving ${error}`)
+        })
+        .finally(() => {
+            console.log('end');
+         
+        });
+
+
+    }
     return (
         <div>
+
+        <button onClick={authUser}>LOGIN</button>
             <h2>USERS: </h2>
             {users.map((user, index) => (
                 <p key={index} onClick= {()=> obtainUserDetails(user.id)}>
@@ -87,7 +106,7 @@ const FetchExam = () => {
                         <p>NAME: {selectUser.first_name}</p>
                         <p>LAST NAME: {selectUser.last_name}</p>
                         <p>EMAIL: {selectUser.email}</p>
-                        <img alt= 'avatar'src={selectUser.avatar} style= {{height: '50px', width:'50px'}}/>
+                        <img alt= 'avatar'src={selectUser.avatar} style= {{height: '150px', width:'150px'}}/>
                     </div>
                 )}
             </div>

@@ -17,6 +17,8 @@ import RegistrerFormik from './components/pure/forms/registrerFormik';
 import AsycEjem from './components/pure/asycEjem';
 import Obserbable from './components/pure/obserbable';
 import FetchExam from './components/pure/FetchExam';
+import AxiosExam from './components/pure/axios.exam';
+import AxiosChuck from './utils/axios.chuck';
 
 function App() {
   return (
@@ -55,8 +57,9 @@ function App() {
    {/* ejemplos  e procesos asincronos*/}
    {/* <AsycEjem></AsycEjem> */}
     {/*  <Obserbable></Obserbable> */}
-   <FetchExam></FetchExam>
-
+  {/*   <FetchExam></FetchExam> */}
+      {/*  <AxiosExam></AxiosExam> */}
+      <AxiosChuck></AxiosChuck>
     {/* PROYECTO FINAL */}
    {/*   <TaskListComponent></TaskListComponent> */}
     {/*   <Father></Father> */}
