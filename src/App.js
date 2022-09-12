@@ -19,6 +19,7 @@ import Obserbable from './components/pure/obserbable';
 import FetchExam from './components/pure/FetchExam';
 import AxiosExam from './components/pure/axios.exam';
 import AxiosChuck from './utils/axios.chuck';
+import AxiosCRUD from './components/pure/AxiosCRUD';
 
 function App() {
   return (
@@ -59,7 +60,8 @@ function App() {
     {/*  <Obserbable></Obserbable> */}
   {/*   <FetchExam></FetchExam> */}
       {/*  <AxiosExam></AxiosExam> */}
-      <AxiosChuck></AxiosChuck>
+     {/*  <AxiosChuck></AxiosChuck>*/}
+     <AxiosCRUD></AxiosCRUD>
     {/* PROYECTO FINAL */}
    {/*   <TaskListComponent></TaskListComponent> */}
     {/*   <Father></Father> */}

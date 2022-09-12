@@ -6,15 +6,22 @@ const AxiosExam = () => {
     const [user, setUser] = useState(null);
 
     useEffect(() => {
-        getRandomUser()
-            .then((response) => {
-                console.log(response);
-            })
-            .catch((error) => {
-                alert (`somethime went wrong: ${error}`)
-            })
+        obtainUser();
+  
 
     }, []);
+
+    const obtainUser = () => {
+        getRandomUser()
+            .then((response) => {
+                if (response.status ===200) {
+                    setUser(response.data.results[0])
+                }
+            })
+            .catch((error) => {
+                alert (`something went wrong: ${error}`)
+            })
+    }
 
     return (
         <div>
@@ -29,7 +36,7 @@ const AxiosExam = () => {
            (
             <div>
                 <p>Generate new user</p>
-                <button onClick={getRandomUser}>random user</button>
+                <button onClick={obtainUser}>random user</button>
             </div>
              )
            }

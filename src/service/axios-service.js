@@ -1,5 +1,11 @@
 import Apirequest from "../utils/axios.confi";
 
+
+
+
+
+
+
 export function getRandomUser() {
     return Apirequest.get('/',  { 
         validateStatus: function (status) {

@@ -1,22 +1,25 @@
 import React , {useState, useEffect} from 'react';
-import {getRandomUser } from '../../service/axios-Chuck-servi';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
+import {getRandomChuck } from '../../service/axios-Chuck-servi';
 
 const AxiosChuck = () => {
 
     const [jokes, setJokes] = useState(null);
 
     useEffect(() => {
-        getRandomUser()
-            .then((response) => {
-                console.log(response);
-            })
-            .catch((error) => {
-                alert (`somethime went wrong: ${error}`)
-            })
-
+        obteinJoke()
     }, []);
+
+    const obteinJoke = () => {
+        getRandomChuck()
+        .then((response) => {
+            if (response.status ===200) {
+                setJokes(response.data.categories)
+            }
+        })
+        .catch((error) => {
+            alert (`somethime went wrong: ${error}`)
+        })
+    }
 
     return (
         <div>
@@ -31,7 +34,7 @@ const AxiosChuck = () => {
            (
             <div>
                 <p>Generate JOKE</p>
-                <button onClick={getRandomUser}>random JOKE</button>
+                <button onClick={obteinJoke}>Random JOKE</button>
             </div>
              )
            }

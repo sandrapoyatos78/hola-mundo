@@ -1,9 +1,6 @@
 import Apirequest from "../utils/axios.chuck";
 
-export function getRandomUser() {
-    return Apirequest.get('/',  { 
-        validateStatus: function (status) {
-        return status < 500; // Resuelve solo si el código de estado es menor que 500
-      }}); // nos devuleve la respuesta random, raiz
+export function getRandomChuck() {
+    return Apirequest.get('/'); // nos devuleve la respuesta random, raiz
     
 }

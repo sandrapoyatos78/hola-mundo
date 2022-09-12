@@ -4,7 +4,7 @@ import axios from "axios";
 
 export default axios.create(
     {
-        baseURL: 'http://randomuser.me/api',    // genera user aleatorios
+        baseURL: 'https://randomuser.me/api',    // genera user aleatorios
         timeout: 6000, 
         responseType: 'json'
     }
